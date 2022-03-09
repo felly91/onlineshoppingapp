@@ -6,7 +6,14 @@ $content = '<img src="images/felly.png" class="imgleft" />'
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-
+<style>
+body {
+  background-image: url('images/login.jpg');
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </head>
 <body>
 
