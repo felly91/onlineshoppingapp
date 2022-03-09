@@ -7,14 +7,16 @@ $address=$_POST['address'];
 $city=$_POST['city'];
 $gender=$_POST['gender'];
 $email=$_POST['email'];
+
 $password=md5($_POST['password']);
-$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$password')");
+$query=mysqli_query($con,"insert into users(fullname,address,city,gender,email,password) values('$fname','$address','$city','$gender','$email','$storepass')");
 if($query)
 {
 	echo "<script>alert('Successfully Registered. You can login now');</script>";
 	header('location:home.php');
 }
 }
+
 ?>
 
 
@@ -25,19 +27,13 @@ if($query)
 		<title>User Registration</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta content="" name="description" />
-		<meta content="" name="author" />
 		
 		
 		
 <style>
 body {
-  background-image: url('images/felly.jpg');
-   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
+  background-color: grey
 }
 </style>
 	</head>
@@ -126,7 +122,8 @@ body {
 					</form>
 
 					<div class="copyright">
-						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span>
+						&copy; <span class="current-year"></span><span class="text-bold text-uppercase">
+							 PHILISTERS_MART</span>. <span>All rights reserved</span>
 					</div>
 
 				</div>
